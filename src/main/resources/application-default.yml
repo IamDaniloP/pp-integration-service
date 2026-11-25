@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: pp-integration-service
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+    virtual-host: ${RABBITMQ_VHOST:/}
+    connection-timeout: 10s
+
+    producer:
+      exchange: ${RABBITMQ_EXCHANGE}
+      routing-key: ${RABBITMQ_ROUTING_KEY}
